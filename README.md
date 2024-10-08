@@ -1,4 +1,4 @@
-The 'Playwright' directory contains examples of automated test scripts for API requests. 
+The 'Playwright_API' directory contains examples of automated test scripts for API requests. 
 
 These test cases are designed to validate API responses, verify key functionalities, and ensure reliability and performance of various endpoints. 
 
