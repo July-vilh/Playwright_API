@@ -10,6 +10,18 @@ It pauses the execution of the function until the awaited promise resolves, maki
 
 You should use `await` when you want to wait for a promise to resolve before continuing with the next line of code.
 
+### Example (asynchronous function):
+
+```javascript
+async function run() {
+  console.log('Execution started...');
+
+// waiting for the fulfillment of the promise
+  const message = await delay(2000); // waiting 2 sec.
+  console.log('Message:', message); // display a message after the delay is completed
+}
+```
+
 ______
 
 `async` и `await` это ключевые слова в JS, которые позволяют работать с асинхронным кодом.
