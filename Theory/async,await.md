@@ -1,0 +1,23 @@
+## async/await:
+
+`async` and `await` are keywords in JavaScript that enable working with asynchronous code more easily. 
+
+1. The `async` keyword is used before a function definition to mark it as asynchronous, allowing the function to pause its execution until a promise is resolved or rejected.
+
+2. The `await` keyword can only be used inside functions declared with `async`.
+
+It pauses the execution of the function until the awaited promise resolves, making asynchronous code appear more like synchronous code, which is easier to read and understand.
+
+You should use `await` when you want to wait for a promise to resolve before continuing with the next line of code.
+
+______
+
+`async` и `await` это ключевые слова в JS, которые позволяют работать с асинхронным кодом.
+
+1. Ключевое слово `async` используется перед определением функции, что бы приостановить выполнение функции
+
+2. `await` можно использовать только внутри функций объявленных с `async`.
+
+`await` приостанавливает выполнение функции до тех пор, пока не будет выполнено ожидаемое, что делает асинхронный код более похожим на синхронный код, который легче читать и понимать.
+
+Вам следует использовать "`await`", когда вы хотите дождаться разрешения promise, прежде чем переходить к следующей строке кода.
