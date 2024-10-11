@@ -20,7 +20,11 @@ async function run() {
   const message = await delay(2000); // waiting 2 sec.
   console.log('Message:', message); // display a message after the delay is completed
 }
+run()
 ```
+Here, we first log the message `'Execution started...'`.
+Then, using `await`, we wait for the promise returned by the `delay` function to resolve, which creates a pause.
+After the `delay` completes (after 2 seconds), the message `'Delay completed'` will be logged.
 
 ______
 
@@ -45,4 +49,6 @@ async function run() {
   console.log('Message:', message); // выводим сообщение после завершения задержки
 }
 ```
-
+Здесь мы сначала выводим сообщение `Выполнение начато...".`
+Затем, используя "`await`", мы ожидаем разрешения запроса, возвращаемого функцией "`delay`", что создает паузу.
+После завершения "`await`" (через 2 секунды) будет выведено сообщение "`Задержка завершена`".
