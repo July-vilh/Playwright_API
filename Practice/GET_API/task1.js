@@ -25,8 +25,7 @@ Working with product prices:
 - Verify that each price is a number and greater than zero.
 - Calculate the sum of all prices and log the result to the console with two decimal places. */
 
-const { test, expect } = require('@playwright/test'); //импортирование модулей
-const { escape } = require('querystring');
+const { test, expect } = require('@playwright/test'); //importing of modules
 
 test('GET request', async ({ request }) => {
       // 1.1. - Send a GET request to the API using the request.get method. 
@@ -84,9 +83,9 @@ test('GET request', async ({ request }) => {
     for (let i = 0; i < responseBody.products.length; i++) {
         const productPrice = responseBody.products[i].price;
 
-    // Проверяем, что цена является числом
-        expect(typeof productPrice).toBe('number'); // Проверяем, что это число
-        expect(productPrice).toBeGreaterThan(0); // Проверяем, что цена больше нуля
+    // verify that price = number
+        expect(typeof productPrice).toBe('number'); // verify that price = number
+        expect(productPrice).toBeGreaterThan(0); // verify that price > 0
 }
 
     // 5.3. Calculate the sum of all prices and log the result to the console with two decimal placesю
