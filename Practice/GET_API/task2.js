@@ -1,12 +1,12 @@
-/* Send a GET request to the specified URL (https://dummyapi.online/api/social-profiles/1).
+/* - Send a GET request to the specified URL (https://dummyapi.online/api/social-profiles/1).
 Response checks:
-Ensure that the request is successful and returns a status of 200.
-Check that the Content-Type header is equal to 'application/json'.
-Verify that the Server header matches one of the values in the array ["Netlify", "Cloudflare", "AWS", "Apache"].
-Ensure that the response size (in bytes) is less than 600.
+- Ensure that the request is successful and returns a status of 200.
+- Check that the Content-Type header is equal to 'application/json'.
+- Verify that the Server header matches one of the values in the array ["Netlify", "Cloudflare", "AWS", "Apache"].
+- Ensure that the response size (in bytes) is less than 600.
 Body content checks:
-Ensure that the response contains the property languages and count the number of elements in this array.
-Check for the presence of the customFields field in the response body and ensure that the first field is named 'FavoriteBook' and its value contains the text '1984'. */
+- Ensure that the response contains the property languages and count the number of elements in this array.
+- Check for the presence of the customFields field in the response body and ensure that the first field is named 'FavoriteBook' and its value contains the text '1984'. */
 
 const { test, expect } = require('@playwright/test');
 
