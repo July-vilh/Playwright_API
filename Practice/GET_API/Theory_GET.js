@@ -1,24 +1,24 @@
 /*
 Main tasks:
-Sending a GET request:
-Send a GET request to the API using the request.get method.
-Check the response status (expected status 200) and ensure the request was successful (response.ok()).
+- Sending a GET request:
+- Send a GET request to the API using the request.get method.
+- Check the response status (expected status 200) and ensure the request was successful (response.ok()).
 Retrieving data:
-Get the response body in JSON format using response.json() and print it to the console.
-Checking the response structure:
-Ensure the response contains a data array.
-Check that data is an array that contains at least one user.
+- Get the response body in JSON format using response.json() and print it to the console.
+- Checking the response structure:
+- Ensure the response contains a data array.
+- Check that data is an array that contains at least one user.
 Accessing user data:
-Extract the first and fifth users from the array.
-Print information about the first user: id, email, first_name, last_name, and avatar URL.
+- Extract the first and fifth users from the array.
+- Print information about the first user: id, email, first_name, last_name, and avatar URL.
 Iterating over users:
-Loop through the data array and print every second user to the console.
+- Loop through the data array and print every second user to the console.
 Checking user properties:
-Check that the first user has the properties: id, email, first_name, last_name, and avatar.
-Ensure the id of the first user is greater than 0.
-Check that their email ends with @reqres.in.
+- Check that the first user has the properties: id, email, first_name, last_name, and avatar.
+- Ensure the id of the first user is greater than 0.
+- Check that their email ends with @reqres.in.
 Checking response headers:
-Ensure the content-type header contains application/json to verify the response is in JSON format.
+- Ensure the content-type header contains application/json to verify the response is in JSON format.
 
 {"page":2,"per_page":6,"total":12,"total_pages":2,"data":
 [{"id":7,"email":"michael.lawson@reqres.in","first_name":"Michael","last_name":"Lawson","avatar":"https://reqres.in/img/faces/7-image.jpg"},
