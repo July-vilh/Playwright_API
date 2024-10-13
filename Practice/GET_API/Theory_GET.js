@@ -31,7 +31,6 @@ Checking response headers:
 */
 
 const { test, expect } = require('@playwright/test'); //importing modules
-const { escape } = require('querystring');
 
 test('GET request to fetch users from page 2', async ({ request }) => {
   // Executing a GET request
