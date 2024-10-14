@@ -1,14 +1,26 @@
 const { test, expect } = require('@playwright/test');
-const bookingApiRequestBody = require('../test-data/post_request_body.json');
-const constants = require('../constants/const.js');// as object //constants.POST_URL
+//const bookingApiRequestBody = require('../test-data-theory/post_request_body.json'); (if need to add "data" to additional file)
+const {API_BASE_URL} = require('../constants/const.js');
 
+console.log('API_BASE_URL:', API_BASE_URL);
 
-test('CREATE POST API REQUEST USING STATIC JSON FILE', async ({ request }) => {
+test('POST request', async ({ request }) => {
+   const postApiResponse = await request.post(API_BASE_URL, {
+      data: {
+         "firstname" : "Jim",
+         "lastname" : "Brown",
+         "totalprice" : 111,
+         "depositpaid" : true,
+         "bookingdates" : {
+             "checkin" : "2018-06-01",
+             "checkout" : "2019-02-07"
+         },
+         "additionalneeds": "Breakfast"
+     }
+   });
+
      //create post request
-     const postApiResponse = await request.post(constants.POST_URL2, {
-        data: bookingApiRequestBody
-     });
-     
+
      const postApiResponseBody = await postApiResponse.json();
      console.log(postApiResponseBody);
 
@@ -21,6 +33,6 @@ test('CREATE POST API REQUEST USING STATIC JSON FILE', async ({ request }) => {
      expect(postApiResponseBody.booking).toHaveProperty("lastname", "Brown");
 
      //Validate nested json objects
-     expect(postApiResponseBody.booking.bookingdates).toHaveProperty("checkin", "2018-01-01");
-     expect(postApiResponseBody.booking.bookingdates).toHaveProperty("checkout", "2019-01-01");
+     expect(postApiResponseBody.booking.bookingdates).toHaveProperty("checkin", "2018-06-01");
+     expect(postApiResponseBody.booking.bookingdates).toHaveProperty("checkout", "2019-02-07");
 });
